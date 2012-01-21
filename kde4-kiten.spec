@@ -3,16 +3,17 @@
 
 Summary:	K Desktop Environment - A Japanese reference tool
 Summary(pl_PL.UTF8):	K Desktop Environment - Słownik angielsko-japoński
-Name:		kiten
-Version:	4.7.3
+Name:		kde4-kiten
+Version:	4.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	43c52322c8a9ed2e6b6cd1fc57fd0c59
+# Source0-md5:	cf787e0c3037a38a5e56f1927cee4693
 URL:		http://www.kde.org/
 BuildRequires:	kde4-kdelibs-devel
 Obsoletes:	kde4-kdeedu-kiten < 4.6.99
+Obsoletes:	kiten <= 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,6 +33,7 @@ Summary:	Header files for kiten libraries
 Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek kiten
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Obsoletes:	kiten-devel <= 4.8.0
 
 %description devel
 Header files for kiten libraries.
@@ -56,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
-%find_lang %{name} --with-kde
+%find_lang %{orgname} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -64,15 +66,17 @@ rm -rf $RPM_BUILD_ROOT
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files -f %{name}.lang
+%files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kiten
 %attr(755,root,root) %{_bindir}/kitengen
+%attr(755,root,root) %{_bindir}/kitenkanjibrowser
 %attr(755,root,root) %{_bindir}/kitenradselect
 %attr(755,root,root) %ghost %{_libdir}/libkiten.so.4
 %attr(755,root,root) %{_libdir}/libkiten.so.*.*.*
 %{_datadir}/apps/kiten
 %{_datadir}/apps/kitenradselect
+%{_datadir}/apps/kitenkanjibrowser
 %{_datadir}/config.kcfg/kiten.kcfg
 %{_desktopdir}/kde4/kiten.desktop
 %{_iconsdir}/hicolor/scalable/apps/kiten.svgz
