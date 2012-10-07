@@ -2,7 +2,7 @@
 %define		orgname		kiten
 
 Summary:	K Desktop Environment - A Japanese reference tool
-Summary(pl_PL.UTF8):	K Desktop Environment - Słownik angielsko-japoński
+Summary(pl.UTF-8):	K Desktop Environment - Słownik angielsko-japoński
 Name:		kde4-kiten
 Version:	4.9.1
 Release:	1
