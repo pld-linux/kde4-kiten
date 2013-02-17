@@ -79,6 +79,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kitenkanjibrowser
 %{_datadir}/config.kcfg/kiten.kcfg
 %{_desktopdir}/kde4/kiten.desktop
+%{_desktopdir}/kde4/kitenkanjibrowser.desktop
+%{_desktopdir}/kde4/kitenradselect.desktop
 %{_fontsdir}/kanjistrokeorders
 %{_iconsdir}/hicolor/scalable/apps/kiten.svgz
 %{_iconsdir}/hicolor/*x*/apps/kiten.png
