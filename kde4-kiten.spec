@@ -4,12 +4,12 @@
 Summary:	K Desktop Environment - A Japanese reference tool
 Summary(pl.UTF-8):	K Desktop Environment - Słownik angielsko-japoński
 Name:		kde4-kiten
-Version:	4.14.0
+Version:	4.14.3
 Release:	1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	786a7e47fc9e13bb1f09130acb5130fb
+# Source0-md5:	33fae4b8bad562dee8823cc521a9e55e
 URL:		http://www.kde.org/
 BuildRequires:	kde4-kdelibs-devel
 Obsoletes:	kde4-kdeedu-kiten < 4.6.99
